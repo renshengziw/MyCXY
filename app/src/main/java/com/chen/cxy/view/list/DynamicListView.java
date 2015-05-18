@@ -5,7 +5,7 @@ import android.util.AttributeSet;
 import android.widget.ListView;
 
 /**
- * 等待修改.
+ * 等待修改..
  */
 public class DynamicListView extends ListView{
 
