@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentBottom="true"
+    android:theme="@android:style/Theme.Translucent"
+    >
+
+    <LinearLayout
+        android:background="#737577"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/id_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+            <ImageButton
+                android:id="@+id/id_home_img"
+                style="@style/homeImageButton"
+                android:src="@mipmap/friend_normal"
+                />
+
+            <TextView
+                android:id="@+id/id_home_tv"
+                android:layout_marginTop="2dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="聊天"
+                android:textColor="#D7D7D7"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_dynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+            <ImageButton
+                android:id="@+id/id_dynamic_img"
+                style="@style/homeImageButton"
+                android:src="@mipmap/dynamic_normal"
+                />
+
+            <TextView
+                android:id="@+id/id_dynamic_tv"
+                android:layout_marginTop="2dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="动态"
+                android:textColor="#D7D7D7"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="#000000"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_discovery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+            <ImageButton
+                android:id="@+id/id_discovery_img"
+                style="@style/homeImageButton"
+                android:src="@mipmap/discovery_normal"
+                />
+
+            <TextView
+                android:id="@+id/id_discovery_tv"
+                android:layout_marginTop="2dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发现"
+                android:textColor="#D7D7D7"
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/id_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+
+            <ImageButton
+                android:id="@+id/id_user_img"
+                style="@style/homeImageButton"
+                android:src="@mipmap/user_normal"
+                />
+
+            <TextView
+                android:id="@+id/id_user_tv"
+                android:layout_marginTop="3dp"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户"
+                android:textColor="#D7D7D7"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_issue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageButton
+            android:id="@+id/id_issue_img"
+            android:scaleType="centerCrop"
+            style="@style/homeImageButton"
+            android:src="@mipmap/issue_normal"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

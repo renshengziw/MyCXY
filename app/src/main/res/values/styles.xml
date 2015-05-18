@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="red">#FF0000</color><!--红色 -->
+    <color name="yellow">#FFFF00</color><!--黄色 -->
+    <color name="green">#008000</color><!--绿色 -->
+    <color name="blue">#449def</color><!--蓝色 -->
+    <color name="purple">#800080</color><!--紫色 -->
+    <color name="gray">#D7D7D7</color><!--浅灰色 -->
+    <color name="lightgray">#9A9A9A</color><!--浅灰色 -->
+    <color name="friendgray">#E4E6E5</color><!--聊天界面点击后的效果颜色 -->
+
+
+
+    <color name="skyblue">#87CEEB</color><!--天蓝色 -->
+    <color name="steelblue">#4682B4</color><!--钢兰色 -->
+    <color name="royalblue">#4169E1</color><!--皇家蓝 -->
+
+    <!-- 主页切换按钮样式 -->
+    <style name="homeImageButton" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+</resources>
