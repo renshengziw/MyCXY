@@ -1,8 +1,16 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
+    <!-- Base application theme.
+     android:Theme.Light.NoTitleBar
+     Theme.Holo.Light.DarkActionBar //显示标题栏
+     -->
+    <style name="AppTheme" parent="NoTitleBar">
         <!-- Customize your theme here. -->
+    </style>
+
+    <!--暂时设置没有titlebar样式  -->
+    <style name="NoTitleBar" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <color name="white">#FFFFFF</color><!--白色 -->
