@@ -92,51 +92,58 @@ public class FriendListViewFragment extends Fragment {
         //count_tv 未读数量
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_boy );
-        map.put("nickname_iv", "神蕴的分身");
+        map.put("nickname_tv", "神蕴的分身");
         map.put("content_tv", "纪念保罗");
         map.put("count_tv", 2);
         list.add(map);
 
         map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_boy );
-        map.put("nickname_iv", "蒙若多");
+        map.put("nickname_tv", "蒙若多");
         map.put("content_tv", "我晋级黄金V了 哈哈哈啊哈哈哈啊哈");
         map.put("count_tv", 0);
         list.add(map);
 
         map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_girl );
-        map.put("nickname_iv", "辛德拉");
+        map.put("nickname_tv", "辛德拉");
         map.put("content_tv", "是时候进攻提莫的要塞了!!");
         map.put("count_tv", 12);
         list.add(map);
 
         map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_girl );
-        map.put("nickname_iv", "安妮");
+        map.put("nickname_tv", "安妮");
         map.put("content_tv", "好像被虚弱了");
         map.put("count_tv", 0);
         list.add(map);
 
         map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_girl );
-        map.put("nickname_iv", "豹女");
+        map.put("nickname_tv", "豹女");
         map.put("content_tv", "我为什么叫豹女!!");
         map.put("count_tv", 1);
         list.add(map);
 
         map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_boy );
-        map.put("nickname_iv", "神若多");
+        map.put("nickname_tv", "神若多");
         map.put("content_tv", "哈哈恭喜EDP获得LPL季中邀请赛冠军");
         map.put("count_tv", 0);
         list.add(map);
 
         map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_girl );
-        map.put("nickname_iv", "蒙若多的分身");
+        map.put("nickname_tv", "蒙若多的分身");
         map.put("content_tv", "蒙若多感觉晋级铂金!!");
         map.put("count_tv", "99+");
+        list.add(map);
+
+        map = new HashMap<String,Object>();
+        map.put("portrait_iv",R.mipmap.default_girl );
+        map.put("nickname_tv", "幸福媳妇");
+        map.put("content_tv", "要幸福");
+        map.put("count_tv", "9");
         list.add(map);
 
         return list;
@@ -146,8 +153,8 @@ public class FriendListViewFragment extends Fragment {
     private void showList(List<Map<String,Object>> list){
         if(adapter == null){
             adapter = new FriendAdapter(context, list, R.layout.friend_list_item,
-                    new String[]{"portrait_iv","nickname_iv","content_tv","count_tv"},
-                    new int []{R.id.portrait_iv,R.id.nickname_iv,R.id.content_tv,R.id.count_tv});
+                    new String[]{"portrait_iv","nickname_tv","content_tv","count_tv"},
+                    new int []{R.id.portrait_iv,R.id.nickname_tv,R.id.content_tv,R.id.count_tv});
         }else{
             this.list = list;
             adapter.notifyDataSetChanged();

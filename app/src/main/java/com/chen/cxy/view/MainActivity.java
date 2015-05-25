@@ -96,6 +96,8 @@ public class MainActivity extends AbActivity implements View.OnClickListener{
                     friendFragment = new FriendFragment();
                     beginTransaction.add(R.id.main_frame, friendFragment);
                 }
+                homeButton.setImageResource(R.mipmap.friend_pressed);
+                home_tv.setTextColor(this.getResources().getColor(R.color.maincion));
                 break;
             case 2:
                 if(dynamicFragment != null){
@@ -104,11 +106,16 @@ public class MainActivity extends AbActivity implements View.OnClickListener{
                     dynamicFragment = new DynamicFragment();
                     beginTransaction.add(R.id.main_frame, dynamicFragment);
                 }
-                //channelBtn.setImageResource(R.drawable.channel_pressed);
+                dynamicButton.setImageResource(R.mipmap.dynamic_pressed);
+                dynamic_tv.setTextColor(this.getResources().getColor(R.color.maincion));
                 break;
             case 3:
+                discoveryButton.setImageResource(R.mipmap.discovery_pressed);
+                discovery_tv.setTextColor(this.getResources().getColor(R.color.maincion));
                 break;
             case 4:
+                userButton.setImageResource(R.mipmap.user_pressed);
+                user_tv.setTextColor(this.getResources().getColor(R.color.maincion));
                 break;
 
             default:
@@ -138,16 +145,35 @@ public class MainActivity extends AbActivity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+        resetImg() ;
         switch (v.getId()){
             case  R.id.id_home:
                 selected(1); //选择首页(聊天)
-            break;
+                break;
             case  R.id.id_dynamic:
                 selected(2);//选择动态
-            break;
+                break;
+            case  R.id.id_discovery:
+                selected(3); //发现
+                break;
+            case  R.id.id_user:
+                selected(4);//选择用户信息
+                break;
 
         }
+    }
 
-
+    /**
+     * 每次点击后重置ImageButton的图片为对应未点击状态
+     */
+    private void resetImg() {
+        homeButton.setImageResource(R.mipmap.friend_normal);
+        dynamicButton.setImageResource(R.mipmap.dynamic_normal);
+        discoveryButton.setImageResource(R.mipmap.discovery_normal);
+        userButton.setImageResource(R.mipmap.user_normal);
+        home_tv.setTextColor(this.getResources().getColor(R.color.gray));
+        dynamic_tv.setTextColor(this.getResources().getColor(R.color.gray));
+        discovery_tv.setTextColor(this.getResources().getColor(R.color.gray));
+        user_tv.setTextColor(this.getResources().getColor(R.color.gray));
     }
 }

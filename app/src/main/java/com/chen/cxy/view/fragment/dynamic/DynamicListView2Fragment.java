@@ -8,19 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SimpleAdapter;
-
 import com.chen.cxy.R;
 import com.chen.cxy.view.list.DynamicListView;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * 目前是显示同城动态
+ * 显示全球动态
  */
-public class DynamicListViewFragment extends Fragment {
+public class DynamicListView2Fragment extends Fragment {
     Context context;//上下文
     SimpleAdapter adapter;
     DynamicListView listView;
@@ -48,8 +46,8 @@ public class DynamicListViewFragment extends Fragment {
      * @return A new instance of fragment DynamicFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DynamicListViewFragment newInstance(String param1, String param2) {
-        DynamicListViewFragment fragment = new DynamicListViewFragment();
+    public static DynamicListView2Fragment newInstance(String param1, String param2) {
+        DynamicListView2Fragment fragment = new DynamicListView2Fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,7 +55,7 @@ public class DynamicListViewFragment extends Fragment {
         return fragment;
     }
 
-    public DynamicListViewFragment() {
+    public DynamicListView2Fragment() {
         // Required empty public constructor
     }
 
@@ -94,27 +92,27 @@ public class DynamicListViewFragment extends Fragment {
         //like_count 喜欢的数量
         Map<String,Object> map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_boy );
-        map.put("nickname_tv", "神蕴的分身");
+        map.put("nickname_tv", "CCTV5");
         map.put("address_tv", "北京");
-        map.put("content_tv", "纪念保罗");
-        map.put("content_iv", R.mipmap.del_dynamic);
+        map.put("content_tv", "余竹安成为2020年NBA选修状元");
+        map.put("content_iv", R.mipmap.del_nba);
         map.put("like_count", 100);
         list.add(map);
 
         map = new HashMap<String,Object>();
         map.put("portrait_iv",R.mipmap.default_boy );
-        map.put("nickname_tv", "蒙若多");
+        map.put("nickname_tv", "神蕴");
         map.put("address_tv", "北京");
-        map.put("content_tv", "我晋级黄金V了 哈哈哈啊哈哈哈啊哈");
-        map.put("content_iv", R.mipmap.del_yxlm);
+        map.put("content_tv", "以前去故宫的照片");
+        map.put("content_iv", R.mipmap.del_cat);
         map.put("like_count", 1000);
         list.add(map);
 
         map = new HashMap<String,Object>();
-        map.put("portrait_iv",R.mipmap.default_girl );
-        map.put("nickname_tv", "辛德拉");
-        map.put("address_tv", "北京");
-        map.put("content_tv", "提莫的辛德拉要塞");
+        map.put("portrait_iv",R.mipmap.default_boy );
+        map.put("nickname_tv", "蒙若多");
+        map.put("address_tv", "厦门");
+        map.put("content_tv", "升级到黄金4了 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈");
         map.put("content_iv", R.mipmap.del_tm);
         map.put("like_count", 1000);
         list.add(map);

@@ -3,6 +3,7 @@ package com.chen.cxy.view.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ public class FriendAdapter extends SimpleAdapter implements View.OnClickListener
     LayoutInflater inflater;
     TextView count_tv;
     LinearLayout friendLayout;
-    TextView nickname_iv;
+    TextView nickname_tv;
 
     /**
      * Constructor
@@ -70,9 +71,9 @@ public class FriendAdapter extends SimpleAdapter implements View.OnClickListener
 
     private void init(View convertView){
         count_tv = (TextView) convertView.findViewById(R.id.count_tv);
-        nickname_iv = (TextView) convertView.findViewById(R.id.nickname_iv);
+        nickname_tv = (TextView) convertView.findViewById(R.id.nickname_tv);
         friendLayout = (LinearLayout) convertView.findViewById(R.id.friend_layout);
-
+        Log.i("TAG", "count_tv=" + count_tv.getText().toString() + " / nickname_iv="+nickname_tv.getText().toString());
 
         friendLayout.setOnClickListener(this);
 
@@ -82,10 +83,12 @@ public class FriendAdapter extends SimpleAdapter implements View.OnClickListener
     public void onClick(View v) {
         switch(v.getId()){
             case  R.id.friend_layout:
+                //使用v获取的才是对应item中的内容
+                TextView tv = (TextView) v.findViewById(R.id.nickname_tv);
                 Intent intent = new Intent(context, FriendChatActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("userName","神蕴");
-                bundle.putString("friendName", nickname_iv.getText().toString());
+                bundle.putString("friendName", tv.getText().toString());
                 intent.putExtras(bundle);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//使用Context的startActivity方法的话，就需要开启一个新的task
                 context.startActivity(intent);

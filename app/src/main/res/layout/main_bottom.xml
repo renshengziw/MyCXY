@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="聊天"
-                android:textColor="#D7D7D7"
+                android:textColor="@color/gray"
                 />
 
         </LinearLayout>
@@ -64,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="动态"
-                android:textColor="#D7D7D7"
+                android:textColor="@color/gray"
                 />
 
         </LinearLayout>
@@ -110,7 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="发现"
-                android:textColor="#D7D7D7"
+                android:textColor="@color/gray"
                 />
 
         </LinearLayout>
@@ -140,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="用户"
-                android:textColor="#D7D7D7"
+                android:textColor="@color/gray"
                 />
 
         </LinearLayout>
