@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@mipmap/del_chatfrom_bg_normal_9" android:state_focused="true"/>
-    <item android:drawable="@mipmap/del_chatfrom_bg_normal_9" android:state_selected="true"/>
-    <item android:drawable="@mipmap/del_chatfrom_bg_normal_9" android:state_pressed="true"/>
-    <item android:drawable="@mipmap/del_chatfrom_bg_focused_9"/>
+    <item android:drawable="@mipmap/del_chatfrom_bg_focused" android:state_focused="true"/>
+    <item android:drawable="@mipmap/del_chatfrom_bg_focused" android:state_selected="true"/>
+    <item android:drawable="@mipmap/del_chatfrom_bg_focused" android:state_pressed="true"/>
+    <item android:drawable="@mipmap/del_chatfrom_bg_normal"/>
 </selector>

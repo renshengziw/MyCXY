@@ -94,7 +94,7 @@ public class DynamicListView2Fragment extends Fragment {
         map.put("portrait_iv",R.mipmap.default_boy );
         map.put("nickname_tv", "CCTV5");
         map.put("address_tv", "北京");
-        map.put("content_tv", "余竹安成为2020年NBA选修状元");
+        map.put("content_tv", "恭喜余竹安成为2020年NBA选秀状元");
         map.put("content_iv", R.mipmap.del_nba);
         map.put("like_count", 100);
         list.add(map);

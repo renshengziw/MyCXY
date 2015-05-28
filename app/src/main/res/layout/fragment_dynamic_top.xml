@@ -14,20 +14,24 @@
         android:gravity="center_horizontal"
         >
 
-        <Button
+        <TextView
+            android:id="@+id/dynamic_left"
+            android:gravity="center"
             android:text="同城"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@mipmap/local_pressed"
-            style="@style/homeImageButton"
+            android:clickable="true"
             />
-        <Button
+        <TextView
+            android:id="@+id/dynamic_right"
             android:text="全球"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@mipmap/all_normal"
-            style="@style/homeImageButton"
+            android:clickable="true"
             />
 
 

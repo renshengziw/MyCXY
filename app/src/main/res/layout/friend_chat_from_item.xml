@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/verygray"
+    android:paddingTop="10dp"
+    >
+
+    <TextView
+        android:id="@+id/fc_time_tv"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:text="13:50"
+        android:textSize="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/fc_portrait_iv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/default_girl"
+            />
+        <TextView
+            android:id="@+id/fc_content_tv"
+            android:layout_toRightOf="@id/fc_portrait_iv"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="25dp"
+            android:text="Validates resource references inside Android XML files.Validates resource references inside Android XML files."
+            android:background="@drawable/del_chat_from_selector"
+            style="@style/friendChatContentStyle"
+            />
+
+    </RelativeLayout>
 
 </LinearLayout>
