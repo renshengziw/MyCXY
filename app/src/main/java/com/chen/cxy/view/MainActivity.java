@@ -14,6 +14,7 @@ import com.ab.activity.AbActivity;
 import com.chen.cxy.R;
 import com.chen.cxy.view.fragment.dynamic.DynamicFragment;
 import com.chen.cxy.view.fragment.home.FriendFragment;
+import com.chen.cxy.view.fragment.issue.IssueFragment;
 
 
 public class MainActivity extends AbActivity implements View.OnClickListener{
@@ -40,6 +41,7 @@ public class MainActivity extends AbActivity implements View.OnClickListener{
 
     private DynamicFragment dynamicFragment;
     private FriendFragment friendFragment;
+    private IssueFragment issueFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,6 +119,14 @@ public class MainActivity extends AbActivity implements View.OnClickListener{
                 userButton.setImageResource(R.mipmap.user_pressed);
                 user_tv.setTextColor(this.getResources().getColor(R.color.maincion));
                 break;
+            case 5:
+                if(issueFragment == null){
+                    issueFragment = new IssueFragment(this);
+                    beginTransaction.add(R.id.main_frame, issueFragment);
+                }else{
+                    beginTransaction.show(issueFragment);
+
+                }
 
             default:
                 break;
@@ -139,6 +149,10 @@ public class MainActivity extends AbActivity implements View.OnClickListener{
             beginTransaction.hide(dynamicFragment);
         }
 
+        if(issueFragment != null){
+            beginTransaction.hide(issueFragment);
+        }
+
 
     }
 
@@ -159,6 +173,8 @@ public class MainActivity extends AbActivity implements View.OnClickListener{
             case  R.id.id_user:
                 selected(4);//选择用户信息
                 break;
+            case R.id.id_issue:
+                selected(5);
 
         }
     }

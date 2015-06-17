@@ -18,7 +18,7 @@ public class DynamicFragment extends Fragment implements View.OnClickListener{
 
 
     DynamicListViewFragment listViewFragment;
-    DynamicListView2Fragment listView2Fragment;
+    DynamicListViewFragment listView2Fragment;
     TextView dynamicLeft; //目前是同城
     TextView dynamicRight; //目前是全球
 
@@ -110,7 +110,7 @@ public class DynamicFragment extends Fragment implements View.OnClickListener{
                 break;
             case 2 : //right
                 if(listView2Fragment == null){
-                    listView2Fragment = new DynamicListView2Fragment();
+                    listView2Fragment = new DynamicListViewFragment();
                     beginTransaction.add(R.id.dynamic_frame,listView2Fragment);
                 }else{
                     beginTransaction.show(listView2Fragment);

@@ -1,27 +1,21 @@
-package com.chen.cxy.view.adapter;
+package com.chen.cxy.view.home.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.chen.cxy.R;
 import com.chen.cxy.common.Constant;
-import com.chen.cxy.view.home.FriendChatActivity;
 import com.chen.cxy.view.home.entity.ChatMessageEntity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by ZhangChen on 2015/5/14.

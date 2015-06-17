@@ -3,104 +3,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/gray"
+    android:background="@color/redgray"
     android:padding="5dp"
+
     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/layout_white_circle"
+        >
 
     <LinearLayout
         android:id="@+id/user_info"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="#ffffff"
-        >
-
-    <ImageView
-        android:id="@+id/portrait_iv"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/default_boy"
-        android:layout_margin="5dp"
-        />
-
-    <LinearLayout
-        android:layout_marginLeft="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:id="@+id/nickname_tv"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="神蕴的分身"
-            android:textSize="12sp"
-            android:textColor="@color/black"
-            />
-
-        <LinearLayout
-            android:layout_marginTop="3dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/location"
-                />
-
-            <TextView
-                android:id="@+id/address_tv"
-                android:layout_marginLeft="3dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="北京"
-                android:textSize="9sp"
-                android:textColor="@color/lightgray"
-                />
-
-            <TextView
-                android:id="@+id/time_tv"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7秒前"
-                android:textSize="9sp"
-                android:textColor="@color/lightgray"
-                />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:gravity="center"
-        android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="15sp"
-        android:background="@drawable/textview_circle"
-        android:textColor="#ffffff"
-        android:textSize="11dp"
-        android:text="喜欢旅行"
-        />
-
-    <LinearLayout
         android:layout_marginRight="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center|right"
         >
 
         <ImageView
-            android:id="@+id/xingxing_iv"
+            android:id="@+id/portrait_iv"
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/xingxing_normal"
+            android:src="@mipmap/default_boy"
             />
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/nickname_tv"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="神蕴的分身"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/location"
+                    />
+
+                <TextView
+                    android:id="@+id/address_tv"
+                    android:layout_marginLeft="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="北京"
+                    android:textSize="9sp"
+                    android:textColor="@color/lightgray"
+                    />
+
+                <TextView
+                    android:id="@+id/time_tv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7秒前"
+                    android:textSize="9sp"
+                    android:textColor="@color/lightgray"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="15sp"
+            android:background="@drawable/textview_circle"
+            android:textColor="#ffffff"
+            android:textSize="11dp"
+            android:text="喜欢旅行"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|right"
+            >
+
+            <ImageView
+                android:id="@+id/xingxing_iv"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/xingxing_normal"
+                />
 
         </LinearLayout>
 
@@ -130,7 +138,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:background="@mipmap/del_dynamic"
+            android:background="@mipmap/del_cat"
             />
 
     </LinearLayout>
@@ -140,42 +148,44 @@
         android:layout_height="40dp"
         android:background="@color/white"
         android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         >
 
         <!--在后台处理事判断是否是好友 再动态添加对应的ImageView 和 TextView 内容 -->
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             >
 
-                <LinearLayout
-                    android:id="@+id/friend_message"
+            <LinearLayout
+                android:id="@+id/friend_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    >
+                    android:src="@mipmap/message"
+                    />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/message"
-                        />
-
-                    <TextView
-                        android:layout_marginLeft="3dp"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="加好友"
-                        android:textSize="9sp"
-                        android:textColor="@color/lightgray"
-                        />
-
-                </LinearLayout>
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加好友"
+                    android:textSize="9sp"
+                    android:textColor="@color/lightgray"
+                    />
 
             </LinearLayout>
+
+        </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -184,7 +194,7 @@
             />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
@@ -203,11 +213,12 @@
                     />
 
                 <TextView
+                    android:id="@+id/dr_reply_count"
                     android:layout_marginLeft="3dp"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="回复"
+                    android:text="12"
                     android:textSize="9sp"
                     android:textColor="@color/lightgray"
                     />
@@ -223,13 +234,13 @@
             />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             >
             <ImageView
-                android:id="@+id/like"
+                android:id="@+id/love_pressed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/dynamic_love_pressed"
@@ -241,7 +252,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="123"
                 android:textSize="9sp"
                 android:textColor="@color/lightgray"
                 />
@@ -251,6 +262,8 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
+
+    </LinearLayout>
 
     </LinearLayout>
 

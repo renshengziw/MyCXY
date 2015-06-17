@@ -10,8 +10,7 @@ import android.view.ViewGroup;
 import android.widget.SimpleAdapter;
 
 import com.chen.cxy.R;
-import com.chen.cxy.view.adapter.FriendAdapter;
-import com.chen.cxy.view.list.DynamicListView;
+import com.chen.cxy.view.home.adapter.FriendAdapter;
 import com.chen.cxy.view.list.FriendListView;
 
 import java.util.ArrayList;

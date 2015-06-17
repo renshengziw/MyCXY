@@ -2,13 +2,16 @@ package com.chen.cxy.view.fragment.dynamic;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
 import com.chen.cxy.R;
+import com.chen.cxy.view.dynamic.DynamicContentActivity;
 import com.chen.cxy.view.list.DynamicListView;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +21,7 @@ import java.util.Map;
 /**
  * 显示全球动态
  */
-public class DynamicListView2Fragment extends Fragment {
+public class DynamicListView2Fragment extends Fragment implements AdapterView.OnItemClickListener{
     Context context;//上下文
     SimpleAdapter adapter;
     DynamicListView listView;
@@ -132,6 +135,7 @@ public class DynamicListView2Fragment extends Fragment {
         }
 
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
     }
 
 
@@ -139,6 +143,21 @@ public class DynamicListView2Fragment extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Map<String,Object> map = list.get(position);
+
+        Intent intent = new Intent(context, DynamicContentActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("nickname_tv",(String)map.get("nickname_tv"));
+        bundle.putString("address_tv",(String)map.get("address_tv"));
+        bundle.putString("content_tv",(String)map.get("content_tv"));
+        bundle.putString("like_count",(String)map.get("like_count"));
+        intent.putExtras(bundle);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);//使用Context的startActivity方法的话，就需要开启一个新的task
+        context.startActivity(intent);
     }
 
 

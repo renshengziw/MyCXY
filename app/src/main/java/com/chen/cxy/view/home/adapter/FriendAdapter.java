@@ -1,4 +1,4 @@
-package com.chen.cxy.view.adapter;
+package com.chen.cxy.view.home.adapter;
 
 import android.content.Context;
 import android.content.Intent;

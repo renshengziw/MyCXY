@@ -20,10 +20,12 @@
     <color name="green">#008000</color><!--绿色 -->
     <color name="blue">#449def</color><!--蓝色 -->
     <color name="purple">#800080</color><!--紫色 -->
+    <color name="pink">#FF99CC</color><!--粉色 -->
     <color name="gray">#D7D7D7</color><!--浅灰色 -->
     <color name="lightgray">#9A9A9A</color><!--浅灰色 -->
-    <color name="friendgray">#E4E6E5</color><!--聊天界面点击后的效果颜色 -->#EAECEB
+    <color name="friendgray">#E4E6E5</color><!--聊天界面点击后的效果颜色 -->
     <color name="verygray">#EAECEB</color><!--聊天界面点击后的效果颜色 -->
+    <color name="redgray">#EFEBE9</color><!--红灰 -->
 
     <color name="maincion">#D54344</color><!--主页点击icon颜色 -->
 
@@ -54,6 +56,17 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
+    </style>
+
+    <!--弹出层-->
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+    </style>
+
+    <!--弹出层动画-->
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
     </style>
 
 
